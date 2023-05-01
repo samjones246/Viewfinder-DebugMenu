@@ -42,6 +42,10 @@ namespace Viewfinder_DebugMenu
                     controller.Show();
                 }
             }
+            if (Input.GetKeyDown(KeyCode.End))
+            {
+                Component.FindObjectOfType<Transporter>()?.FinishLevel();
+            }
         }
     }
 }
