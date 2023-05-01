@@ -31,6 +31,17 @@ namespace Viewfinder_DebugMenu
                 DebugFlyMode controller = debugMenuParent.GetComponent<DebugFlyingToggle>().debugFlyMode;
                 controller.SetFlyingEnabled(!controller.GetFlyingEnabled());
             }
+            if (Input.GetKeyDown(KeyCode.F6))
+            {
+                RuntimeLevelManagement controller = GameObject.Find("Level Menu (UI Builder)").GetComponent<RuntimeLevelManagement>();
+                if (controller.showing)
+                {
+                    controller.Hide();
+                } else
+                {
+                    controller.Show();
+                }
+            }
         }
     }
 }
